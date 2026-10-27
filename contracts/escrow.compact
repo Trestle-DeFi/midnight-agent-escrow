@@ -11,7 +11,7 @@ export ledger escrowCreated: Boolean;
 export ledger escrowReleased: Boolean;
 export ledger escrowRefunded: Boolean;
 
-// Circuit 1: storeMessage — original hello-world circuit, kept for regression.
+// Circuit 1: storeMessage — regression test from the original hello-world example.
 export circuit storeMessage(newMessage: Opaque<"string">): [] {
   message = disclose(newMessage);
 }

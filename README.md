@@ -29,7 +29,7 @@ running on two chains.
 
 | Circuit | Purpose |
 |---|---|
-| `storeMessage` | Original hello-world circuit (regression) |
+| `storeMessage` | Original escrow circuit (regression) |
 | `createEscrow` | Initiate conditional escrow |
 | `releaseEscrow` | Release funds to payee |
 | `refundEscrow` | Refund payer |
@@ -57,9 +57,9 @@ Expected: `2 tests passing` (Deploys the contract, Stores Hello World!).
 ```
 .
 ├── contracts/
-│   ├── hello-world.compact          # Compact source (4 circuits)
+│   ├── escrow.compact          # Compact source (4 circuits)
 │   ├── index.ts                     # TypeScript bindings
-│   └── managed/hello-world/         # Compiled ZK artifacts
+│   └── managed/escrow/         # Compiled ZK artifacts
 ├── src/
 │   ├── config.ts                    # Network configs (local/preview/preprod)
 │   ├── providers.ts                 # Midnight provider wiring
@@ -74,7 +74,7 @@ Expected: `2 tests passing` (Deploys the contract, Stores Hello World!).
 
 ```bash
 yarn install
-compact compile contracts/hello-world.compact contracts/managed/hello-world
+compact compile contracts/escrow.compact contracts/managed/escrow
 ```
 
 ## License

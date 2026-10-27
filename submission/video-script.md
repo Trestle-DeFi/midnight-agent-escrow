@@ -17,7 +17,7 @@ The condition stays private. The outcome is public. That's the dual-ledger model
 `createEscrow` initiates the escrow and sets `escrowCreated = true`.
 `releaseEscrow` releases funds to the payee.
 `refundEscrow` refunds the payer.
-And `storeMessage` is our regression test for the hello-world circuit."
+And `storeMessage` is our regression test for the escrow circuit."
 
 **[0:45-1:05] Dual-ledger explanation**
 "On the public ledger, observers see three flags:
@@ -36,7 +36,7 @@ on Midnight. Thank you."
 ---
 **Screen recording plan:**
 1. Title card (0:00-0:10)
-2. `hello-world.compact` source (0:10-0:45)
+2. `escrow.compact` source (0:10-0:45)
 3. `hw.test.ts` test suite (0:45-1:05)
 4. Terminal: `yarn env:up` → `yarn wait:dust` → `yarn test:local` (1:05-1:25)
 5. Closing slide with repo URL (1:25-1:35)

@@ -23,7 +23,7 @@ a Compact smart contract. Funds release only when a ZK-verified condition holds.
 - `createEscrow` — initiate escrow
 - `releaseEscrow` — release to payee
 - `refundEscrow` — refund payer
-- `storeMessage` — regression test for hello-world
+- `storeMessage` — regression test for escrow
 
 ## 3. Dual-Ledger Model
 

@@ -68,7 +68,7 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('storeMessage',
                                      'argument 1 (as invoked from Typescript)',
-                                     'hello-world.compact line 15 char 1',
+                                     'escrow.compact line 15 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
@@ -96,7 +96,7 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('createEscrow',
                                      'argument 1 (as invoked from Typescript)',
-                                     'hello-world.compact line 23 char 1',
+                                     'escrow.compact line 23 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
@@ -119,7 +119,7 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('releaseEscrow',
                                      'argument 1 (as invoked from Typescript)',
-                                     'hello-world.compact line 31 char 1',
+                                     'escrow.compact line 31 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
@@ -142,7 +142,7 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('refundEscrow',
                                      'argument 1 (as invoked from Typescript)',
-                                     'hello-world.compact line 39 char 1',
+                                     'escrow.compact line 39 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }

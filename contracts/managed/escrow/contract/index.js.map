@@ -2,7 +2,7 @@
   "version": 3,
   "file": "index.js",
   "sourceRoot": "../../../../",
-  "sources": ["contracts/hello-world.compact"],
+  "sources": ["contracts/escrow.compact"],
   "names": [],
   "mappings": ";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAAA;;;;;;;;;;MAcA,AAAA,YAEC;;;;;cAF2B,YAA4B;;;;;;;;;;;yCAA5B,YAA4B;;;;;;;;;8CAA5B,YAA4B;;;OAEvD;MAMD,AAAA,YAIC;;;;;;;;;;;;;;;;;;;;;;OAAA;MAID,AAAA,aAKC;;;;;;;;;;;;;;;;;;;;;;OAAA;MAGD,AAAA,YAGC;;;;;;;;;;;;;;;;;;;;;;OAAA;;;;;;;;;;;;;;GAAC;EAzCF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAMA;;;;;;;;;yEAAwC;IAGxC;;;;;;;;;yEAAqC;IACrC;;;;;;;;;yEAAsC;IACtC;;;;;;;;;yEAAsC;;;;;;;GA8BpC;EA3BF,AAAA,eAEC,4BAF2B,YAA4B;IACtD;;;;;;;2HAAmB,YAAU;;yEAAtB;;GACR;EAMD,AAAA,eAIC;IAHC;;;;;;;;;yEAAa;IACb;;;;;;;;;yEAAc;IACd;;;;;;;;;yEAAc;;GACf;EAID,AAAA,gBAKC;IAFC;;;;;;;;;yEAAc;IACd;;;;;;;;;yEAAa;;GACd;EAGD,AAAA,eAGC;IAFC;;;;;;;;;yEAAc;IACd;;;;;;;;;yEAAa;;GACd;;;;;;;;;;;;;;;;IAnCD;qCAAA;;;;;;;;;;;0GAAwC;KAAA;IAGxC;qCAAA;;;;;;;;;;;0GAAqC;KAAA;IACrC;qCAAA;;;;;;;;;;;0GAAsC;KAAA;IACtC;qCAAA;;;;;;;;;;;0GAAsC;KAAA;;;;;;;;;;"
 }

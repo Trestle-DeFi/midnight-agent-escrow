@@ -19,7 +19,7 @@ export function buildProviders(
 
     return {
         privateStateProvider: levelPrivateStateProvider({
-            privateStateStoreName: `hello-world-${Date.now()}`,
+            privateStateStoreName: `escrow-${Date.now()}`,
             privateStoragePasswordProvider: () => 'Hello-World-Test-Password',
             accountId: wallet.getCoinPublicKey(),
         }),

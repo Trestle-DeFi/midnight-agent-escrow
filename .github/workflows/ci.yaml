@@ -43,13 +43,34 @@ jobs:
 
       - name: Generate contract source
         run: |
-          cat > contracts/hello-world.compact <<'EOF'
+          cat > contracts/escrow.compact <<'EOF'
           pragma language_version 0.23;
 
+          // AgentShield Midnight Escrow — privacy-preserving conditional payment.
+
           export ledger message: Opaque<"string">;
+          export ledger escrowCreated: Boolean;
+          export ledger escrowReleased: Boolean;
+          export ledger escrowRefunded: Boolean;
 
           export circuit storeMessage(newMessage: Opaque<"string">): [] {
             message = disclose(newMessage);
+          }
+
+          export circuit createEscrow(): [] {
+            escrowCreated = true;
+            escrowReleased = false;
+            escrowRefunded = false;
+          }
+
+          export circuit releaseEscrow(): [] {
+            escrowReleased = true;
+            escrowCreated = false;
+          }
+
+          export circuit refundEscrow(): [] {
+            escrowRefunded = true;
+            escrowCreated = false;
           }
           EOF
 
