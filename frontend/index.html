@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>AgentShield Midnight Escrow</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 2rem auto; }
+    button { margin: 0.25rem; padding: 0.5rem 1rem; }
+    pre { background: #f4f4f4; padding: 1rem; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>AgentShield Midnight Escrow</h1>
+  <p>Network: <span id="net">local</span></p>
+  <p>Contract: <span id="addr">b96b821f75a25b2dde9bdfdff4970304415565d9cc58747f985f66207c840d0a</span></p>
+  <div>
+    <button id="create">Create Escrow</button>
+    <button id="release">Release Escrow</button>
+    <button id="refund">Refund Escrow</button>
+    <button id="store">Store "Hello World!"</button>
+  </div>
+  <pre id="state">—</pre>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

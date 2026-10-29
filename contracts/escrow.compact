@@ -11,7 +11,6 @@ export ledger escrowCreated: Boolean;
 export ledger escrowReleased: Boolean;
 export ledger escrowRefunded: Boolean;
 
-// Circuit 1: storeMessage — regression test from the original hello-world example.
 export circuit storeMessage(newMessage: Opaque<"string">): [] {
   message = disclose(newMessage);
 }
@@ -29,14 +28,13 @@ export circuit createEscrow(): [] {
 // Circuit 3: releaseEscrow — payer releases funds to payee.
 // Only callable when escrowCreated is true and not yet settled.
 export circuit releaseEscrow(): [] {
-  // Constraint: escrow must exist and be unsettled.
-  // In Compact, Boolean ledger reads act as public assertions.
+  assert(escrowCreated, "Escrow must exist and be unsettled");
   escrowReleased = true;
   escrowCreated = false;
 }
 
-// Circuit 4: refundEscrow — payer refunds themselves.
 export circuit refundEscrow(): [] {
+  assert(escrowCreated, "Escrow must exist and be unsettled");
   escrowRefunded = true;
   escrowCreated = false;
 }

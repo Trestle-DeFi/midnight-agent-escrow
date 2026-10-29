@@ -68,7 +68,7 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('storeMessage',
                                      'argument 1 (as invoked from Typescript)',
-                                     'escrow.compact line 15 char 1',
+                                     'escrow.compact line 14 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
@@ -96,7 +96,7 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('createEscrow',
                                      'argument 1 (as invoked from Typescript)',
-                                     'escrow.compact line 23 char 1',
+                                     'escrow.compact line 22 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
@@ -119,7 +119,7 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('releaseEscrow',
                                      'argument 1 (as invoked from Typescript)',
-                                     'escrow.compact line 31 char 1',
+                                     'escrow.compact line 30 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
@@ -142,7 +142,7 @@ export class Contract {
         if (!(typeof(contextOrig_0) === 'object' && contextOrig_0.currentQueryContext != undefined)) {
           __compactRuntime.typeError('refundEscrow',
                                      'argument 1 (as invoked from Typescript)',
-                                     'escrow.compact line 39 char 1',
+                                     'escrow.compact line 36 char 1',
                                      'CircuitContext',
                                      contextOrig_0)
         }
@@ -297,6 +297,19 @@ export class Contract {
     return [];
   }
   _releaseEscrow_0(context, partialProofData) {
+    __compactRuntime.assert(_descriptor_0.fromValue(__compactRuntime.queryLedgerState(context,
+                                                                                      partialProofData,
+                                                                                      [
+                                                                                       { dup: { n: 0 } },
+                                                                                       { idx: { cached: false,
+                                                                                                pushPath: false,
+                                                                                                path: [
+                                                                                                       { tag: 'value',
+                                                                                                         value: { value: _descriptor_7.toValue(1n),
+                                                                                                                  alignment: _descriptor_7.alignment() } }] } },
+                                                                                       { popeq: { cached: false,
+                                                                                                  result: undefined } }]).value),
+                            'Escrow must exist and be unsettled');
     __compactRuntime.queryLedgerState(context,
                                       partialProofData,
                                       [
@@ -320,6 +333,19 @@ export class Contract {
     return [];
   }
   _refundEscrow_0(context, partialProofData) {
+    __compactRuntime.assert(_descriptor_0.fromValue(__compactRuntime.queryLedgerState(context,
+                                                                                      partialProofData,
+                                                                                      [
+                                                                                       { dup: { n: 0 } },
+                                                                                       { idx: { cached: false,
+                                                                                                pushPath: false,
+                                                                                                path: [
+                                                                                                       { tag: 'value',
+                                                                                                         value: { value: _descriptor_7.toValue(1n),
+                                                                                                                  alignment: _descriptor_7.alignment() } }] } },
+                                                                                       { popeq: { cached: false,
+                                                                                                  result: undefined } }]).value),
+                            'Escrow must exist and be unsettled');
     __compactRuntime.queryLedgerState(context,
                                       partialProofData,
                                       [

@@ -175,4 +175,44 @@ describe(`Hello World Contract (${network})`, () => {
     const state = await queryLedger(providers);
     expect(state.message).toEqual(message);
   });
+
+  it('Creates escrow', async () => {
+    await (submitCallTx<Contract, 'createEscrow'>)(providers, {
+      compiledContract: CompiledHelloWorldContract,
+      contractAddress,
+      circuitId: 'createEscrow',
+    });
+    const state = await queryLedger(providers);
+    expect(state.escrowCreated).toBe(true);
+    expect(state.escrowReleased).toBe(false);
+    expect(state.escrowRefunded).toBe(false);
+  });
+
+  it('Releases escrow', async () => {
+    await (submitCallTx<Contract, 'releaseEscrow'>)(providers, {
+      compiledContract: CompiledHelloWorldContract,
+      contractAddress,
+      circuitId: 'releaseEscrow',
+    });
+    const state = await queryLedger(providers);
+    expect(state.escrowReleased).toBe(true);
+    expect(state.escrowCreated).toBe(false);
+  });
+
+  it('Refunds escrow', async () => {
+    await (submitCallTx<Contract, 'createEscrow'>)(providers, {
+      compiledContract: CompiledHelloWorldContract,
+      contractAddress,
+      circuitId: 'createEscrow',
+    });
+    await (submitCallTx<Contract, 'refundEscrow'>)(providers, {
+      compiledContract: CompiledHelloWorldContract,
+      contractAddress,
+      circuitId: 'refundEscrow',
+    });
+    const state = await queryLedger(providers);
+    expect(state.escrowRefunded).toBe(true);
+    expect(state.escrowCreated).toBe(false);
+  });
+
 });
