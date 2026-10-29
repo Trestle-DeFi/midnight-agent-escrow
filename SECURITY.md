@@ -64,3 +64,12 @@ We prefer all communications to be in English.
 
 If you have suggestions on how this process could be improved please submit an
 issue or pull request.
+
+## AgentShield Escrow Security Notes
+
+- `releaseEscrow`/`refundEscrow` assert `escrowCreated == true` (guards against double-settle).
+- `createEscrow` resets released/refunded flags.
+- No DUST accounting or payer/payee roles yet (roadmap); demo is a state-machine prototype.
+- Private state (release condition, payee, amount) is roadmap; current contract stores only public flags.
+- Tests cover deploy + storeMessage + create/release/refund (5 tests).
+
