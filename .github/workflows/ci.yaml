@@ -76,7 +76,8 @@ jobs:
         run: yarn compile
 
       - name: Start local Midnight network
-        run: yarn env:up
+        run: docker compose up -d --wait --wait-timeout 300
+        timeout-minutes: 10
 
       - name: Wait for DUST to accrue
         run: yarn wait:dust
