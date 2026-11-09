@@ -1,5 +1,4 @@
 name: Scan
-permissions: {}
 
 on:
   push:
@@ -28,3 +27,6 @@ jobs:
 
       - name: Scan code
         uses: midnightntwrk/upload-sarif-github-action@362d0346b194663004cb371e8e8523bd1c910917
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          fail_severity: high
